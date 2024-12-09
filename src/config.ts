@@ -7,5 +7,4 @@ export const config = {
 
   port: env.PORT || 3000,
   projectID: env.PROJECT_ID
-
 }
