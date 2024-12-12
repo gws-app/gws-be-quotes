@@ -19,34 +19,31 @@ Quotes API is a simple backend service that provides an endpoint to get random q
 
 ---
 
-## Menjalankan Proyek
+## Running Projects
 
-### Prasyarat
+### Prerequisites
 1. **Bun**
-2. **Google Cloud Service Account** dengan akses ke Firestore (keyfile `svac.json` harus disediakan).
-3. **Firestore** dengan koleksi `quotes`.
+2. **Google Cloud Service Account** with access to Firestore (keyfile `svac.json` must be provided).
+3. **Firestore** with `quotes` collection.
 
-### Instalasi
+### Installation
 
-### Endpoint API
+### API Endpoints
 1. Health Check
 URL: /api/healthcheck
 Method: GET
-Deskripsi: Mengecek status API.
+Description: Checks API status.
 Response:
-json
+text
 ```
-{
-  "status": "success",
-  "message": "API is healthy"
-}
+API is OK
 ```
 2. Random Quote
 URL: /api/quotes
 Method: GET
-Deskripsi: Mengambil kutipan acak dari koleksi database.
+Description: Retrieves random quotes from a database collection.
 Response:
-Berhasil:
+Succeed:
 json
 ```
 {
@@ -80,21 +77,19 @@ No Quotes:
   }
 }
 ```
-Penyesuaian Konfigurasi
-File config.ts:
+Configuration
+config.ts file:
 
 ```
 export const config = {
-  port: 3000, // Ubah jika ingin menggunakan port lain
+  port: 3000, // Change if you want to use another port
 };
 ```
 
-## Kontribusi
+## License
+This project is licensed under the MIT license.
 
-## Lisensi
-Proyek ini dilisensikan di bawah lisensi MIT.
-
-# q-feature
+# Development
 
 To install dependencies:
 
@@ -107,5 +102,3 @@ To run:
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.1.34. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
